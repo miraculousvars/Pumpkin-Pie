@@ -1,0 +1,52 @@
+var canvasWidth = 500;
+var canvasHeight = 700;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  background(255, 160, 122);
+  rectMode(CENTER);
+}
+
+function draw() {
+  
+  //plate colors
+  stroke(255,222,173);
+  
+  //bottom of the plate
+  fill(222,184,135);
+  arc(width/2,height/2+65,250,60,0,PI);
+  
+  //plate rim
+  fill(255, 235, 205);
+  ellipse(width/2, height/2+40,300,100);
+  
+  //inner part of the plate
+  fill(222,184,135);
+  ellipse(width/2,height/2+40,220,50);
+  
+  //pie
+  fill(210, 105, 30);
+  stroke(160, 82, 45);
+  
+  //body of the pie
+  rect(width/2,(height/2)+20,200,50);
+  arc((width/2),(height/2)+41,201,50,0,PI);
+  
+  //top of the pie
+  ellipse(width/2, height/2,200,50);
+  
+  
+  //whipped cream
+  fill('white');
+  stroke('white');
+  ellipse((width/2)-35,(height/2)-5,50,20);
+  ellipse((width/2)-35,(height/2)-15,40,15);
+  ellipse((width/2)-35,(height/2)-23,25,10);
+  triangle((width/2)-45,(height/2)-23,
+            (width/2)-35,(height/2)-37,
+            (width/2)-25,(height/2)-23);
+ 
+ textSize(48);
+ text("Pumpkin Pie Time!",width/2-190,height-550);
+  
+}
